@@ -10,13 +10,15 @@
     3
     -> 1
 '''
-n = int(input('Введите размер элементов списка: '))
-list_n = input('Введите элементы списка через пробел: ').split()
-arr = list(map(int, list_n))
-x = int (input('Введите число х: '))
+import random
+
+N = int(input("Введите количество элементов в массиве "))
+list = [random.randint(1, 20) for i in range(N)]
+print(list)
+x = int(input("Введите искомое число "))
 count = 0
-for i in range(n):
-    if arr[i] == x:
+for i in list:
+    if i == x:
         count += 1
 print(f'Число {x} встречается в списке А {count} раз.')
 
